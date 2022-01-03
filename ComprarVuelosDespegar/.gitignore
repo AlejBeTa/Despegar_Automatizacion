@@ -1,0 +1,19 @@
+#Intellij
+/.idea/
+.idea/
+/out/
+
+#Gradle
+/build
+
+#Archivos de clases compiladas
+*.class
+
+#Archivos log
+*.log
+
+#Caché del proyecto
+.gradletasknamecache
+
+#Gradle GUI config
+gadle-app.setting
