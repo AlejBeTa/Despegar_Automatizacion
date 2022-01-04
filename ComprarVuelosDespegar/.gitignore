@@ -17,3 +17,20 @@
 
 #Gradle GUI config
 gadle-app.setting
+
+#Otros
+.classpath
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+/.gradle/
+/.sonar/
