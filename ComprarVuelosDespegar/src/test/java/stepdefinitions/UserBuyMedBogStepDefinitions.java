@@ -7,19 +7,17 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import models.FlightInformation;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import task.EnterFlightInformation;
 import task.SearchFlight;
+import task.SelectFlight;
 import utils.drivers.MyChromeDriver;
 
 
 import java.util.List;
 
-import static org.hamcrest.Matchers.*;
 import static utils.constants.Constants.URL_DESPEGAR;
 
 
@@ -46,5 +44,10 @@ public class UserBuyMedBogStepDefinitions {
     @When("^the user search flight$")
     public void theUserSearchFlight(){
         OnStage.theActorInTheSpotlight().wasAbleTo(SearchFlight.search());
+    }
+
+    @And("^select the first result$")
+    public void selectTheFirstResult(){
+        OnStage.theActorInTheSpotlight().wasAbleTo(SelectFlight.select());
     }
 }
