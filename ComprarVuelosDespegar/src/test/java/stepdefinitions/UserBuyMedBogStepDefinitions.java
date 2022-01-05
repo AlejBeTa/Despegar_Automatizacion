@@ -10,6 +10,8 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.Matchers;
+import questions.ValidateFinalTitle;
 import task.EnterFlightInformation;
 import task.SearchFlight;
 import task.SelectFlight;
@@ -18,6 +20,7 @@ import utils.drivers.MyChromeDriver;
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static utils.constants.Constants.URL_DESPEGAR;
 
 
@@ -49,5 +52,10 @@ public class UserBuyMedBogStepDefinitions {
     @And("^select the first result$")
     public void selectTheFirstResult(){
         OnStage.theActorInTheSpotlight().wasAbleTo(SelectFlight.select());
+    }
+
+    @Then("^he should see (.*)$")
+    public void heShouldSee(String message){
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateFinalTitle.Texto(), Matchers.is(message)));
     }
 }
