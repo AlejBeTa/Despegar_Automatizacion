@@ -16,6 +16,7 @@ public class HomePage {
     public static final Target NEXTMONTH_ARROW = Target.the("Flecha de siguientes meses").located(By.xpath("//*[@id='component-modals']/div[1]/div[1]/div[2]/a[2]"));
     public static  Target TXT_DAY;
     public static final Target APPLY_DATE = Target.the("Boton para aplicar fechas").located(By.xpath("//*[@id='component-modals']/div[1]/div[2]/div[1]/button/em"));
+    public static final Target SEARCH_BUTTON = Target.the("Boton buscar vuelos").located(By.xpath("//*[@id='searchbox-sbox-box-flights']/div/div[2]/div[3]/button/em"));
 
     public static void DAY(String day){
         TXT_DAY=Target.the("Día").located(By.xpath(BASE_DAY+day+"]"));

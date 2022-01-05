@@ -1,17 +1,16 @@
 package task;
 
-import interactions.FindMonth;
+
 import interactions.SelectDate;
 import interactions.Type;
 import models.FlightInformation;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
+
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static userinterfaces.HomePage.*;
 
 
@@ -31,5 +30,5 @@ public class EnterFlightInformation implements Task {
 
     }
 
-    public static EnterFlightInformation withTheInfo(List<FlightInformation> flightinformation){ return Tasks.instrumented(EnterFlightInformation.class, flightinformation);}
+    public static EnterFlightInformation withTheInfo(List<FlightInformation> flightinformation){ return instrumented(EnterFlightInformation.class, flightinformation);}
 }

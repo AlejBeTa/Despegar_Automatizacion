@@ -9,7 +9,6 @@ import userinterfaces.HomePage;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static userinterfaces.HomePage.TXT_DAY;
-import static userinterfaces.HomePage.TXT_FIRSTMONTH;
 import static utils.constants.Constants.SESENTA;
 
 public class SelectDay implements Interaction {

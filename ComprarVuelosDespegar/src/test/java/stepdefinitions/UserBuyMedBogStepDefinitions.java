@@ -13,6 +13,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import task.EnterFlightInformation;
+import task.SearchFlight;
 import utils.drivers.MyChromeDriver;
 
 
@@ -40,5 +41,10 @@ public class UserBuyMedBogStepDefinitions {
     @And("^type all the data$")
     public void typeAllTheData(List<FlightInformation> flightinformation){
         OnStage.theActorInTheSpotlight().wasAbleTo(EnterFlightInformation.withTheInfo(flightinformation));
+    }
+
+    @When("^the user search flight$")
+    public void theUserSearchFlight(){
+        OnStage.theActorInTheSpotlight().wasAbleTo(SearchFlight.search());
     }
 }

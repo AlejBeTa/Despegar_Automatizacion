@@ -2,18 +2,12 @@ package interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
-import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.hamcrest.Matchers;
-import questions.ValidateFirstMonth;
-import questions.ValidateSecondMonth;
+
+
 
 import static java.lang.Boolean.TRUE;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static userinterfaces.HomePage.*;
 import static utils.constants.Constants.SESENTA;
