@@ -4,11 +4,11 @@ Feature: As a user i want to buy a flight from Medellin to Bogota
   Scenario Outline: buy a flight
     Given that the user enter to the page
     And type all the data
-      | from   | to   | godate   | backdate   |
-      | <from> | <to> | <godate> | <backdate> |
+      | from   | to   | goDate   | backDate   |
+      | <from> | <to> | <goDate> | <backDate> |
     When the user search flight
     And select the first result
     Then he should see <message>
     Examples:
-    | from | to  | godate    | backdate  | message                                              |
-    | med  | bog | febrero 4 | febrero 5 | ¡Falta poco! Completa tus datos y finaliza tu compra |
+    | from                           | to                            | goDate    | backDate  | message                                              |
+    | Medellín, Antioquia, Colombia  | Bogotá, Bogotá D.C., Colombia | febrero 4 | febrero 5 | ¡Falta poco! Completa tus datos y finaliza tu compra |
