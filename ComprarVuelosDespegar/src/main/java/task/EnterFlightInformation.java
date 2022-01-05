@@ -1,6 +1,7 @@
 package task;
 
 
+import interactions.SelectCity;
 import interactions.SelectDate;
 import interactions.Type;
 import models.FlightInformation;
@@ -22,9 +23,7 @@ public class EnterFlightInformation implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-
-        actor.attemptsTo(Type.information(flightinformation.get(0).getFrom(),INPUT_FROM));
-        actor.attemptsTo(Type.information(flightinformation.get(0).getTo(),INPUT_TO));
+        actor.attemptsTo(SelectCity.withCitys(flightinformation.get(0).getFrom(),flightinformation.get(0).getTo()));
         actor.attemptsTo(SelectDate.withDates(flightinformation.get(0).getGoDate(),flightinformation.get(0).getBackDate()));
 
 

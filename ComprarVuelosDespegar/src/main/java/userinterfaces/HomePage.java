@@ -17,6 +17,9 @@ public class HomePage {
     public static  Target TXT_DAY;
     public static final Target APPLY_DATE = Target.the("Boton para aplicar fechas").located(By.xpath("//*[@id='component-modals']/div[1]/div[2]/div[1]/button/em"));
     public static final Target SEARCH_BUTTON = Target.the("Boton buscar vuelos").located(By.xpath("//*[@id='searchbox-sbox-box-flights']/div/div[2]/div[3]/button/em"));
+    public static final Target ORIGINCITY_LIST = Target.the("Lista de ciudades de origen").located(By.xpath("/html/body/div[4]/div/div[1]/ul/li[1]/span"));
+    public static final Target DESTINYCITY_LIST = Target.the("Lista de ciudades de destino").located(By.xpath("/html/body/div[4]/div/div[1]/ul/li[1]/span"));
+
 
     public static void DAY(String day){
         TXT_DAY=Target.the("Día").located(By.xpath(BASE_DAY+day+"]"));
