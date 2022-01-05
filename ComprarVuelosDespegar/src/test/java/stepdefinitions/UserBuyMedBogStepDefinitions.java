@@ -9,21 +9,23 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
+import utils.drivers.MyChromeDriver;
 
-import org.openqa.selenium.WebDriver;
+
+import static org.hamcrest.Matchers.*;
+import static utils.constants.Constants.URL_DESPEGAR;
 
 
 public class UserBuyMedBogStepDefinitions {
+
     @Before
     public void setUp(){
-        OnStage.setTheStage(Cast.whereEveryoneCan(BrowseTheWeb.with(theirBrowser)));
+        OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Alejandro");
     }
 
-    @Managed
-    private WebDriver theirBrowser;
-
     @Given("^that the user enter to the page$")
-    public void thatTheUserEnterToThePage(){ OnStage.theActorInTheSpotlight().wasAbleTo(Open.url("https://www.despegar.com.co/"));}
+    public void thatTheUserEnterToThePage(){ OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(MyChromeDriver.inicializarNavegador().onUrl(URL_DESPEGAR) ));}
 }

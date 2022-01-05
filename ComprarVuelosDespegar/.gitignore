@@ -6,6 +6,9 @@
 #Gradle
 /build
 
+#Serenity
+/target/
+
 #Archivos de clases compiladas
 *.class
 
